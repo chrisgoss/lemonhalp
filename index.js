@@ -8,6 +8,8 @@ app.use(layouts)
 app.use(express.urlencoded ({extended:false}))
 app.use(methodOverride ("_method"))
 
+app.use("/person", require("./controllers/person"))
+
 app.get("/", (req,res) => {
     res.render("home")
 })
